@@ -26,7 +26,7 @@ app.use('/build', express.static(path.join(__dirname, 'build')));
 
 // get server data
 app.get('/blog', function(req, res){
-  let json = fs.readFileSync(path.join(__dirname, "build/mock/blog.json"), 'utf8');
+  let json = fs.readFileSync(path.join(__dirname, "mock/blog.json"), 'utf8');
   res.end(json);
 });
 
